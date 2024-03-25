@@ -6015,7 +6015,33 @@ PERFORMANCE OF THIS SOFTWARE.
             behavior: "smooth"
         }); else console.error("Block with ID " + blockId + " not found.");
     }));
-    window["FLS"] = true;
+    function updateTimer(timerId) {
+        var now = new Date;
+        var target = new Date(now);
+        target.setHours(24);
+        target.setMinutes(0);
+        target.setSeconds(0);
+        var remaining = target.getTime() - now.getTime();
+        var hours = Math.floor(remaining / (1e3 * 60 * 60) % 24);
+        var minutes = Math.floor(remaining / 1e3 / 60 % 60);
+        var seconds = Math.floor(remaining / 1e3 % 60);
+        var timerElement = document.getElementById(timerId);
+        timerElement.querySelector(".hours").textContent = pad(hours);
+        timerElement.querySelector(".minutes").textContent = pad(minutes);
+        timerElement.querySelector(".seconds").textContent = pad(seconds);
+    }
+    function pad(num) {
+        return (num < 10 ? "0" : "") + num;
+    }
+    setInterval((function() {
+        updateTimer("timer1");
+        updateTimer("timer2");
+        updateTimer("timer3");
+    }), 1e3);
+    updateTimer("timer1");
+    updateTimer("timer2");
+    updateTimer("timer3");
+    window["FLS"] = false;
     isWebp();
     formFieldsInit({
         viewPass: false,

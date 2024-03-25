@@ -338,7 +338,7 @@ body::after {
   transition: transform .3s ease 0s,-webkit-transform .3s ease 0s;
   color: #000;
   background-color: #eee;
-  padding: 40px 20px;
+  padding: 50px 30px;
   width: 100%;
   max-width: 900px;
   border-radius: 20px
@@ -445,7 +445,7 @@ body::after {
   font-size: .6875rem;
   color: red;
   position: absolute;
-  top: 100%;
+  top: calc(100% - 2px);
   left: .3125rem
 }
 .header {
@@ -836,10 +836,6 @@ body::after {
 .works {
   background-color: #fff
 }
-.works__container {
-  padding-top: 3.125rem;
-  padding-bottom: 3.125rem
-}
 .works__slide {
   position: relative;
   height: 12.5rem
@@ -885,10 +881,6 @@ body::after {
 .clients {
   background-color: #fff
 }
-.clients__container {
-  padding-top: 3.125rem;
-  padding-bottom: 3.125rem
-}
 .clients__slide {
   display: flex;
   justify-content: center;
@@ -910,7 +902,7 @@ body::after {
 .how__items {
   margin: 0 -1.25rem;
   display: grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(5,1fr);
   justify-items: center;
   position: relative
 }
@@ -922,7 +914,7 @@ body::after {
   top: 50%;
   -webkit-transform: translate(0,-50%);
   transform: translate(0,-50%);
-  left: 2.5rem;
+  left: 3.125rem;
   background-color: rgba(22,96,161,.7333333333)
 }
 .how__item {
@@ -945,13 +937,11 @@ body::after {
   padding: .25rem .25rem .625rem .25rem
 }
 .how__item:nth-child(2) .item-how__text-block,
-.how__item:nth-child(4) .item-how__text-block,
-.how__item:nth-child(6) .item-how__text-block {
+.how__item:nth-child(4) .item-how__text-block {
   position: absolute
 }
 .how__item:nth-child(2) .item-how__text,
-.how__item:nth-child(4) .item-how__text,
-.how__item:nth-child(6) .item-how__text {
+.how__item:nth-child(4) .item-how__text {
   -webkit-transform: translate(0,-8px);
   transform: translate(0,-8px);
   border: 5px solid #e0e0e0;
@@ -1783,15 +1773,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     position: relative
   }
   .how__item:nth-child(2) .item-how__text-block,
-  .how__item:nth-child(4) .item-how__text-block,
-  .how__item:nth-child(6) .item-how__text-block {
+  .how__item:nth-child(4) .item-how__text-block {
     width: 188.275862%;
     left: 0;
     top: 100%
   }
   .how__item:nth-child(2) .item-how__text-block img,
-  .how__item:nth-child(4) .item-how__text-block img,
-  .how__item:nth-child(6) .item-how__text-block img {
+  .how__item:nth-child(4) .item-how__text-block img {
     left: 4.6875rem;
     position: relative;
     -webkit-transform: rotate(180deg);
@@ -1808,14 +1796,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .how__item:nth-child(5) .item-how__text-block {
     width: 171.034483%;
     left: -1.875rem
-  }
-  .how__item:nth-child(6) .item-how__text-block {
-    width: 150.344828%;
-    left: auto;
-    right: 0
-  }
-  .how__item:nth-child(6) .item-how__text-block img {
-    left: 7.8125rem
   }
 }
 @media (min-width:52.8125em) {
@@ -1844,7 +1824,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 @media (min-width:73.125em) {
   .popup__content {
-    font-size: 2.1875rem
+    font-size: 1.875rem
+  }
+  .popup__close {
+    font-size: 1.5625rem
   }
   .button {
     font-size: 1.125rem
@@ -1954,6 +1937,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .file__item {
     font-size: 1rem
   }
+  .works__container {
+    padding-top: 3.125rem
+  }
+  .works__container {
+    padding-bottom: 3.125rem
+  }
   .benefits__container {
     row-gap: 3.125rem
   }
@@ -1965,6 +1954,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .item-benefits__text {
     font-size: 1.25rem
+  }
+  .clients__container {
+    padding-top: 3.125rem
+  }
+  .clients__container {
+    padding-bottom: 3.125rem
   }
   .how__container {
     padding-top: 5rem
@@ -2029,9 +2024,23 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-top: 4.1875rem
   }
 }
+@media (max-width:25em) {
+  .how__item:nth-child(1) .item-how__text-block,
+  .how__item:nth-child(3) .item-how__text-block,
+  .how__item:nth-child(5) .item-how__text-block {
+    width: 8.125rem
+  }
+  .how__item:nth-child(2) .item-how__text-block,
+  .how__item:nth-child(4) .item-how__text-block {
+    width: 8.125rem
+  }
+}
 @media (max-width:20em) {
   .popup__content {
-    font-size: 1.5625rem
+    font-size: 1.25rem
+  }
+  .popup__close {
+    font-size: 1.25rem
   }
   .button {
     font-size: .8125rem
@@ -2141,6 +2150,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .file__item {
     font-size: .875rem
   }
+  .works__container {
+    padding-top: 2.5rem
+  }
+  .works__container {
+    padding-bottom: 2.5rem
+  }
   .benefits__container {
     row-gap: 1.875rem
   }
@@ -2152,6 +2167,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .item-benefits__text {
     font-size: .9375rem
+  }
+  .clients__container {
+    padding-top: 2.5rem
+  }
+  .clients__container {
+    padding-bottom: 2.5rem
   }
   .how__container {
     padding-top: 2.5rem
@@ -2345,7 +2366,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     width: 100%
   }
   .offer__timer {
-    margin-top: 1.875rem
+    margin-bottom: 1.875rem
   }
   .form-offer {
     width: 100%
@@ -2388,8 +2409,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     transform: rotate(-90deg)
   }
   .how__item:nth-child(2) .item-how__text-block,
-  .how__item:nth-child(4) .item-how__text-block,
-  .how__item:nth-child(6) .item-how__text-block {
+  .how__item:nth-child(4) .item-how__text-block {
     width: 180%;
     display: flex;
     align-items: center;
@@ -2399,8 +2419,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     transform: translate(0,-50%)
   }
   .how__item:nth-child(2) .item-how__text-block img,
-  .how__item:nth-child(4) .item-how__text-block img,
-  .how__item:nth-child(6) .item-how__text-block img {
+  .how__item:nth-child(4) .item-how__text-block img {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg)
   }
@@ -2461,7 +2480,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .hero__timer {
     width: auto;
-    padding: 4.375rem 2.5rem 4.375rem 7.5rem
+    padding: 3.4375rem 2.5rem 4.375rem 7.5rem
   }
   .promotion {
     margin-bottom: 0;
@@ -2476,12 +2495,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .how__item:nth-child(1) .item-how__text-block,
   .how__item:nth-child(3) .item-how__text-block,
   .how__item:nth-child(5) .item-how__text-block {
-    width: 8.125rem
+    width: 8.75rem
   }
   .how__item:nth-child(2) .item-how__text-block,
-  .how__item:nth-child(4) .item-how__text-block,
-  .how__item:nth-child(6) .item-how__text-block {
-    width: 8.125rem
+  .how__item:nth-child(4) .item-how__text-block {
+    width: 8.75rem
   }
   .swiper-reviews__avatar {
     display: none
@@ -2606,14 +2624,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 @media (min-width:20em) and (max-width:73.125em) {
-  @supports (font-size:clamp(1.5625rem ,1.3272058824rem + 1.1764705882vw ,2.1875rem)) {
+  @supports (font-size:clamp(1.25rem ,1.0147058824rem + 1.1764705882vw ,1.875rem)) {
     .popup__content {
-      font-size: clamp(1.5625rem ,1.3272058824rem + 1.1764705882vw ,2.1875rem)
+      font-size: clamp(1.25rem ,1.0147058824rem + 1.1764705882vw ,1.875rem)
     }
   }
-  @supports not (font-size:clamp(1.5625rem ,1.3272058824rem + 1.1764705882vw ,2.1875rem)) {
+  @supports not (font-size:clamp(1.25rem ,1.0147058824rem + 1.1764705882vw ,1.875rem)) {
     .popup__content {
-      font-size: calc(1.5625rem + .625 * (100vw - 20rem)/ 53.125)
+      font-size: calc(1.25rem + .625 * (100vw - 20rem)/ 53.125)
+    }
+  }
+  @supports (font-size:clamp(1.25rem ,1.1323529412rem + 0.5882352941vw ,1.5625rem)) {
+    .popup__close {
+      font-size: clamp(1.25rem ,1.1323529412rem + .5882352941vw ,1.5625rem)
+    }
+  }
+  @supports not (font-size:clamp(1.25rem ,1.1323529412rem + 0.5882352941vw ,1.5625rem)) {
+    .popup__close {
+      font-size: calc(1.25rem + .3125 * (100vw - 20rem)/ 53.125)
     }
   }
   @supports (font-size:clamp(0.8125rem ,0.6948529412rem + 0.5882352941vw ,1.125rem)) {
@@ -2976,6 +3004,26 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
       font-size: calc(.875rem + .125 * (100vw - 20rem)/ 53.125)
     }
   }
+  @supports (padding-top:clamp(2.5rem ,2.2647058824rem + 1.1764705882vw ,3.125rem)) {
+    .works__container {
+      padding-top: clamp(2.5rem ,2.2647058824rem + 1.1764705882vw ,3.125rem)
+    }
+  }
+  @supports not (padding-top:clamp(2.5rem ,2.2647058824rem + 1.1764705882vw ,3.125rem)) {
+    .works__container {
+      padding-top: calc(2.5rem + .625 * (100vw - 20rem)/ 53.125)
+    }
+  }
+  @supports (padding-bottom:clamp(2.5rem ,2.2647058824rem + 1.1764705882vw ,3.125rem)) {
+    .works__container {
+      padding-bottom: clamp(2.5rem ,2.2647058824rem + 1.1764705882vw ,3.125rem)
+    }
+  }
+  @supports not (padding-bottom:clamp(2.5rem ,2.2647058824rem + 1.1764705882vw ,3.125rem)) {
+    .works__container {
+      padding-bottom: calc(2.5rem + .625 * (100vw - 20rem)/ 53.125)
+    }
+  }
   @supports (row-gap:clamp(1.875rem ,1.4044117647rem + 2.3529411765vw ,3.125rem)) {
     .benefits__container {
       row-gap: clamp(1.875rem ,1.4044117647rem + 2.3529411765vw ,3.125rem)
@@ -3014,6 +3062,26 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   @supports not (font-size:clamp(0.9375rem ,0.8198529412rem + 0.5882352941vw ,1.25rem)) {
     .item-benefits__text {
       font-size: calc(.9375rem + .3125 * (100vw - 20rem)/ 53.125)
+    }
+  }
+  @supports (padding-top:clamp(2.5rem ,2.2647058824rem + 1.1764705882vw ,3.125rem)) {
+    .clients__container {
+      padding-top: clamp(2.5rem ,2.2647058824rem + 1.1764705882vw ,3.125rem)
+    }
+  }
+  @supports not (padding-top:clamp(2.5rem ,2.2647058824rem + 1.1764705882vw ,3.125rem)) {
+    .clients__container {
+      padding-top: calc(2.5rem + .625 * (100vw - 20rem)/ 53.125)
+    }
+  }
+  @supports (padding-bottom:clamp(2.5rem ,2.2647058824rem + 1.1764705882vw ,3.125rem)) {
+    .clients__container {
+      padding-bottom: clamp(2.5rem ,2.2647058824rem + 1.1764705882vw ,3.125rem)
+    }
+  }
+  @supports not (padding-bottom:clamp(2.5rem ,2.2647058824rem + 1.1764705882vw ,3.125rem)) {
+    .clients__container {
+      padding-bottom: calc(2.5rem + .625 * (100vw - 20rem)/ 53.125)
     }
   }
   @supports (padding-top:clamp(2.5rem ,1.5588235294rem + 4.7058823529vw ,5rem)) {
@@ -3186,15 +3254,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   @supports (width:clamp(0.9375rem ,0.6696308987rem + 1.3393455065vw ,1.3125rem)) {
     .how__item:nth-child(2) .item-how__text-block img,
-    .how__item:nth-child(4) .item-how__text-block img,
-    .how__item:nth-child(6) .item-how__text-block img {
+    .how__item:nth-child(4) .item-how__text-block img {
       width: clamp(.9375rem ,.6696308987rem + 1.3393455065vw ,1.3125rem)
     }
   }
   @supports not (width:clamp(0.9375rem ,0.6696308987rem + 1.3393455065vw ,1.3125rem)) {
     .how__item:nth-child(2) .item-how__text-block img,
-    .how__item:nth-child(4) .item-how__text-block img,
-    .how__item:nth-child(6) .item-how__text-block img {
+    .how__item:nth-child(4) .item-how__text-block img {
       width: calc(.9375rem + .375 * (100vw - 20rem)/ 27.99875)
     }
   }

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240320191327">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240325203015">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,8 +63,12 @@
 									До закінчення акції:
 								</div>
 								<div class="timer__clock">
-									<div class="timer__time">
-										<span>11</span><span>:</span><span>53</span><span>:</span><span>04</span>
+									<div class="timer__time" id="timer1">
+										<span class="hours"></span>
+										<span>:</span>
+										<span class="minutes"></span>
+										<span>:</span>
+										<span class="seconds"></span>
 									</div>
 									<div class="timer__measures">
 										<span>Годин</span>
@@ -121,7 +125,7 @@
 					<div class="print__items">
 						<div class="print__item item-print">
 							<div class="item-print__image">
-								<picture><source srcset="img/print/11.webp" type="image/webp"><img src="img/print/11.jpg" alt="Image"></picture>
+								<picture><source srcset="img/print/byklet.webp" type="image/webp"><img src="img/print/byklet.png" alt="Image"></picture>
 							</div>
 							<h5 class="item-print__title">
 								ЄВРОФЛАЄР
@@ -136,7 +140,7 @@
 						</div>
 						<div class="print__item item-print">
 							<div class="item-print__image">
-								<picture><source srcset="img/print/11.webp" type="image/webp"><img src="img/print/11.jpg" alt="Image"></picture>
+								<picture><source srcset="img/print/plastykovi-karty.webp" type="image/webp"><img src="img/print/plastykovi-karty.png" alt="Image"></picture>
 							</div>
 							<h5 class="item-print__title">
 								ПЛАСТИКОВІ КАРТКИ
@@ -151,7 +155,7 @@
 						</div>
 						<div class="print__item item-print">
 							<div class="item-print__image">
-								<picture><source srcset="img/print/11.webp" type="image/webp"><img src="img/print/11.jpg" alt="Image"></picture>
+								<picture><source srcset="img/print/nalipky.webp" type="image/webp"><img src="img/print/nalipky.png" alt="Image"></picture>
 							</div>
 							<h5 class="item-print__title">
 								НАКЛЕЙКИ
@@ -166,7 +170,7 @@
 						</div>
 						<div class="print__item item-print">
 							<div class="item-print__image">
-								<picture><source srcset="img/print/11.webp" type="image/webp"><img src="img/print/11.jpg" alt="Image"></picture>
+								<picture><source srcset="img/print/byklet2.webp" type="image/webp"><img src="img/print/byklet2.png" alt="Image"></picture>
 							</div>
 							<h5 class="item-print__title">
 								КАЛЕНДАРИКИ
@@ -181,7 +185,7 @@
 						</div>
 						<div class="print__item item-print">
 							<div class="item-print__image">
-								<picture><source srcset="img/print/11.webp" type="image/webp"><img src="img/print/11.jpg" alt="Image"></picture>
+								<picture><source srcset="img/print/pakety.webp" type="image/webp"><img src="img/print/pakety.png" alt="Image"></picture>
 							</div>
 							<h5 class="item-print__title">
 								ВІЗИТКИ
@@ -196,7 +200,7 @@
 						</div>
 						<div class="print__item item-print">
 							<div class="item-print__image">
-								<picture><source srcset="img/print/11.webp" type="image/webp"><img src="img/print/11.jpg" alt="Image"></picture>
+								<picture><source srcset="img/print/konverty.webp" type="image/webp"><img src="img/print/konverty.png" alt="Image"></picture>
 							</div>
 							<h5 class="item-print__title">
 								ЛИСТІВКИ А6
@@ -211,7 +215,7 @@
 						</div>
 						<div class="print__item item-print">
 							<div class="item-print__image">
-								<picture><source srcset="img/print/11.webp" type="image/webp"><img src="img/print/11.jpg" alt="Image"></picture>
+								<picture><source srcset="img/print/katalog.webp" type="image/webp"><img src="img/print/katalog.png" alt="Image"></picture>
 							</div>
 							<h5 class="item-print__title">
 								ЛИСТІВКИ А5
@@ -226,7 +230,7 @@
 						</div>
 						<div class="print__item item-print">
 							<div class="item-print__image">
-								<picture><source srcset="img/print/11.webp" type="image/webp"><img src="img/print/11.jpg" alt="Image"></picture>
+								<picture><source srcset="img/print/postery.webp" type="image/webp"><img src="img/print/postery.png" alt="Image"></picture>
 							</div>
 							<h5 class="item-print__title">
 								ЛИСТІВКИ А4
@@ -241,7 +245,7 @@
 						</div>
 						<div class="print__item item-print">
 							<div class="item-print__image">
-								<picture><source srcset="img/print/11.webp" type="image/webp"><img src="img/print/11.jpg" alt="Image"></picture>
+								<picture><source srcset="img/print/plakaty.webp" type="image/webp"><img src="img/print/plakaty.png" alt="Image"></picture>
 							</div>
 							<h5 class="item-print__title">
 								ПЛАКАТ А3
@@ -256,7 +260,7 @@
 						</div>
 						<div class="print__item item-print">
 							<div class="item-print__image">
-								<picture><source srcset="img/print/11.webp" type="image/webp"><img src="img/print/11.jpg" alt="Image"></picture>
+								<picture><source srcset="img/print/konverty.webp" type="image/webp"><img src="img/print/konverty.png" alt="Image"></picture>
 							</div>
 							<h5 class="item-print__title">
 								ПЛАКАТ А2
@@ -283,10 +287,14 @@
 							та отримайте найкращу ціну <br>
 							Спецпропозиція діє ще:
 						</div>
-						<div class="offer__timer timer">
+						<div class="offer__timer timer" id="timer2">
 							<div class="timer__clock">
 								<div class="timer__time">
-									<span>11</span><span>:</span><span>53</span><span>:</span><span>04</span>
+									<span class="hours"></span>
+									<span>:</span>
+									<span class="minutes"></span>
+									<span>:</span>
+									<span class="seconds"></span>
 								</div>
 								<div class="timer__measures">
 									<span>Годин</span>
@@ -297,7 +305,7 @@
 						</div>
 					</div>
 					<!--при реальній відправці форми змінити режим імітації відправки 'data-dev' на 'data-ajax' -->
-					<form data-dev data-popup-message="#form-message" action="@components/php/send.php" method="POST" class="offer__form form-offer" data-da=".offer__content, 767.98, 1">
+					<form data-ajax data-popup-message="#form-message" action="files/sendmail/sendmail.php" method="POST" class="offer__form form-offer" data-da=".offer__content, 767.98, 2">
 						<h3 class="form-offer__title">
 							Надішліть запит
 						</h3>
@@ -319,7 +327,7 @@
 						</div>
 						<div class="form-offer__item">
 							<div class="form-offer__label">Ваш e-mail: *</div>
-							<input data-required autocomplete="off" type="email" id="mail" name="mail" data-error="Будь ласка, вкажіть ваш дійсний e-mail" placeholder="Введіть Ваш робочий e-mail" class="form-offer__input input">
+							<input data-required autocomplete="off" type="email" id="email" name="email" data-error="Будь ласка, вкажіть ваш дійсний e-mail" placeholder="Введіть Ваш робочий e-mail" class="form-offer__input input">
 						</div>
 						<div class="form-offer__item form-offer__item--file">
 							<div class="form-offer__label">
@@ -531,7 +539,7 @@
 							<div class="item-how__text-block">
 								<div class="item-how__text">
 									Ви залишаєте
-									нам заявку
+									нам свій запит
 								</div>
 								<picture><source srcset="img/how/arrow.webp" type="image/webp"><img src="img/how/arrow.png" alt="Arrow"></picture>
 							</div>
@@ -561,7 +569,7 @@
 							<div class="item-how__text-block">
 								<picture><source srcset="img/how/arrow.webp" type="image/webp"><img src="img/how/arrow.png" alt="Arrow"></picture>
 								<div class="item-how__text">
-									Ви вносите передоплату
+									Запускаємо замовлення в друк
 								</div>
 							</div>
 						</div>
@@ -572,18 +580,6 @@
 									Друкуємо та доставляємо готову продукцію до вас
 								</div>
 								<picture><source srcset="img/how/arrow.webp" type="image/webp"><img src="img/how/arrow.png" alt="Arrow"></picture>
-							</div>
-						</div>
-						<div class="how__item item-how">
-							<picture><source srcset="img/how/06.webp" type="image/webp"><img class="item-how__image" src="img/how/06.png" alt="Image"></picture>
-							<div class="item-how__text-block">
-								<picture><source srcset="img/how/arrow.webp" type="image/webp"><img src="img/how/arrow.png" alt="Arrow"></picture>
-								<div class="item-how__text">
-									Після виконання
-									нашої роботи, ви
-									оплачуєте решту
-									коштів
-								</div>
 							</div>
 						</div>
 					</div>
@@ -675,10 +671,14 @@
 							<br>
 							<p>Спецпропозиція діє ще:</p>
 						</div>
-						<div class="chance__timer timer">
+						<div class="chance__timer timer" id="timer3">
 							<div class="timer__clock">
 								<div class="timer__time">
-									<span>11</span><span>:</span><span>53</span><span>:</span><span>04</span>
+									<span class="hours"></span>
+									<span>:</span>
+									<span class="minutes"></span>
+									<span>:</span>
+									<span class="seconds"></span>
 								</div>
 								<div class="timer__measures">
 									<span>Годин</span>
@@ -749,7 +749,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240320191327"></script>
+	<script src="js/app.min.js?_v=20240325203015"></script>
 </body>
 
 </html>
